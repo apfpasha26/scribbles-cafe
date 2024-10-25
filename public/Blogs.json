@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "cover": "../images/1.jpg",
+        "author_img": "../images/boy1.png",
+        "author_title": "John Doe",
+        "posted_date": "2024-10-25",
+        "title": "The Great Adventure",
+        "reading_time": 4,
+        "hashtags": ["adventure", "fantasy", "bestseller"]
+    },
+    {
+        "id": 2,
+        "cover": "../images/2.png",
+        "author_img": "../images/boy2.png",
+        "author_title": "Jane Smith",
+        "posted_date": "2024-09-15",
+        "title": "Mystery of the Mind",
+        "reading_time": 7,
+        "hashtags": ["mystery", "psychology", "thriller"]
+    },
+    {
+        "id": 3,
+        "cover": "../images/3.png",
+        "author_img": "../images/girl1.jpg",
+        "author_title": "Samuel Green",
+        "posted_date": "2024-08-05",
+        "title": "Journey to the Unknown",
+        "reading_time": 5,
+        "hashtags": ["sci_fi", "adventure", "space"]
+    },
+    {
+        "id": 4,
+        "cover": "../images/4.jpg",
+        "author_img": "../images/girl2.jpg",
+        "author_title": "Alice Johnson",
+        "posted_date": "2024-07-21",
+        "title": "The Art of Living",
+        "reading_time": 3,
+        "hashtags": ["self_help", "wellness", "philosophy"]
+    }
+]
