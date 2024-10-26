@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-const Blog = ({ blog }) => {
-    const {id, cover, author_img, author_title, posted_date, title, reading_time, hashtags} = blog;
-    console.log(blog)
+const Blog = ({ blog, handleBookmarks, handleReadingTime }) => {
+    const { cover, author_img, author_title, posted_date, title, reading_time, hashtags} = blog;
+    // console.log(blog);
     return (
-        <div className='mb-20'>
+        <div className='mb-20 px-3'>
             <div className='py-3'>
                 <img className='rounded-xl'  src={cover} alt="" />
             </div>
@@ -20,24 +20,26 @@ const Blog = ({ blog }) => {
                 </div>
                 <div>
                     <small className='text-lg text-gray-600 mr-2'>{reading_time} mins to read</small>
-                    <button ><img className='h-5' src="../../../../images/bookmark.png" alt="" /></button>
+                    <button onClick={() => handleBookmarks(blog)}><img className='h-5' src="../../../../images/bookmark.png" alt="" /></button>
                 </div>
             </div>
             <h2 className='text-4xl font-bold'>{title}</h2>
             <div className='my-3'>
                 <p>
                     {
-                        hashtags.map(hash => <span className='mr-3 text-md text-gray-600' key={id}><a href={id}>#{hash}</a></span>)
+                        hashtags.map((hash, idx) => <span className='mr-3 text-md text-gray-600' key={idx}><a href="">#{hash}</a></span>)
                     }
                 </p>
             </div>
-            <a className='underline text-blue-500' href={id}>Mark as read</a>
+            <button onClick={() => {handleReadingTime(reading_time)}} className='underline text-blue-500' href="">Mark as read</button>
         </div>
     );
 };
 
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleBookmarks: PropTypes.func,
+    handleReadingTime: PropTypes.func
 }
 
 export default Blog;
